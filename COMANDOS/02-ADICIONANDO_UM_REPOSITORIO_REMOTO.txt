@@ -8,4 +8,7 @@
 
 		$ git remote add "qualquer_nome_a_nossa_escolha" "URL.git"
 
-		Com esse simples comando acima, nós conseguimos referenciar a qualquer
+		Com esse simples comando acima, nós conseguimos referenciar a qualquer repositório no GitHub.
+
+
+
