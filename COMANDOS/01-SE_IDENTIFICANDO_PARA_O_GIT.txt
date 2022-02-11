@@ -1,0 +1,16 @@
+	COMO SE APRESENTAR PARA O GIT
+
+	É muito importante se apresentar para o git, pois o quando usamos versionamento, o git usa a nossa apresentação como forma de controlar de onde uma alteração no projeto veio.
+
+	Podemos fazer isso com o comando:
+
+		MOSTRANDO NOSSO NOME AO GIT:
+
+		$ git config --global user.name "Fulano de Tal"
+
+		Usando o comando acima conseguimos nos apresentar por através de um nome para o git.
+
+		
+		MOSTRANDO O NOSSO EMAIL AO GIT:
+
+		$ git config --global user.email "fulanoDeTal@example.com"

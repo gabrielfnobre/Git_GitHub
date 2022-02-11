@@ -1,0 +1,11 @@
+	ADICIONANDO UM REPOSITÓRIO REMOTO
+
+	Para adicionar um repositório remoto aos nossos projetos pelo git primeiro de tudo temos que criar um repositório no GitHub.
+
+	Depois que o nosso repositório estiver criado, basta então utilizar a URL do repositório - JAMAIS ESQUECENDO QUE ELE SE TRANSFORMA EM UM ARQUIVO ".git" - para referenciar onde o nosso diretório git deve direcionar.
+
+	Podemos fazer isso com o seguinte comando:
+
+		$ git remote add "qualquer_nome_a_nossa_escolha" "URL.git"
+
+		Com esse simples comando acima, nós conseguimos referenciar a qualquer
