@@ -1,0 +1,7 @@
+	COMO VER A LISTA DE COMMITS DO GIT
+
+	Para visualizar a lista de commits que foram dados para aquele determinado arquivo, use o comando:
+
+		$ git log
+
+		E ele trará para você uma lista de todos os commits executados para aquele repositório, isso é muito útil para quando desejamos revisitar um versionamento que desejamos.
