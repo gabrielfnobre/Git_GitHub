@@ -1,0 +1,23 @@
+	GIT BARE - GERANDO REPOSITÓRIOS PUROS
+
+	Um repositório puro é um repositório onde não desejamos armazenar os documentos do nosso projeto somente as alterações, ou seja, os commits.
+	Resumindo, queremos salvar somente os estados em que o nosso projeto anda, e não os documentos, optamos por salvar os documentos em outro lugar.
+
+	Para que uma pessoa usaria um repositório puro?
+
+	Um repositório puro é gerado quando não desejamos que o os nosso documentos saiam do computador ou banco de dados em que está armazenado e fiquem armazenados em um repositório remoto.
+	Em vez disso, para guardar essas informações nós usamos um repositório local, e usamos um repositório puro como repositório remoto, onde todos poderão ter acesso as atualizações.
+
+	Para criar um repositório puro usamos o comando:
+
+		$ git init --bare
+
+		Ele vai gerar um repositório puro, só commits serão armazenados nele.
+
+	OBSERVAÇÕES: Geralmente Repositórios puros são criados em pastas locais, onde o remote é direcionado para alguma pasta dentro do computador ou servidor. Como está numa pasta local usamos o path local para acessar, por exemplo: 
+
+	/C/Users/NomeDoComputador/Servidor/ 
+
+	Diferente dos repositórios remotos não utilizamos o ".git" ao final do path, pois ele vai apontar para uma pasta local mesmo, não há necessidade de usar o ".git";
+
+	Essa técnica é muito utilizada em projetos, onde criamos várias pastas diferentes para cada equipe, que poderá acessá-las realizando um clone do repositório, onde posteriormente poderemos unir as alterações por através das branches.
