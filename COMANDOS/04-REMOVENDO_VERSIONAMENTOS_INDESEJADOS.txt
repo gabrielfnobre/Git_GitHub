@@ -1,0 +1,4 @@
+	REMOVENDO VERSIONAMENTOS INDESEJADOS
+
+	Pode acontecer de termos algum versionamento controlado que não desejamos commitar, na verdade desejamos remover, para fazer isso usamos o seguinte comando:
+		$ git rm "versionamento"
