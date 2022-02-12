@@ -1,0 +1,21 @@
+	BRANCHES
+
+	CRIAR UMA NOVA BRANCH:
+
+	Para criar uma nova branch usamos o comando:
+
+		$ git branch "nome_da_branch_nova"
+
+		Com apenas esse comando já conseguimos gerar uma nova branch.
+
+		ATENÇÃO!!! Não podemos criar uma branch com o nome "master" ou "main".
+
+
+
+	MUDAR PARA UMA DETERMINADA BRANCH:
+
+	Para que possamos mudar da branch atual onde estamos para outra branch usamos o comando "checkout":
+
+		$ git checkout "nome_da_branch_que_desejamos_fazer_parte_agora"
+
+		Depois de executar esse comando, mudamos para a nova branch.
