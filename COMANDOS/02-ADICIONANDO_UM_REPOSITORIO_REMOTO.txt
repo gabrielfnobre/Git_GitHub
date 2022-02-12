@@ -10,5 +10,20 @@
 
 		Com esse simples comando acima, nós conseguimos referenciar a qualquer repositório no GitHub.
 
+	
+	RENOMEANDO UM REPOSITÓRIO REMOTO:
+
+	Para renomear um repositório remoto usamos o seguinte comando:
+
+		$ git remote rename "nome_antigo_do_repositorio" "nome_novo_do_repositorio"
+
+
+
+	PARA REMOVER UM REPOSITÓRIO REMOTO:
+
+	Usamos o comando:
+
+		$ git remote rm "nome_do_repositorio"
+
 
 
