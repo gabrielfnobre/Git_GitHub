@@ -114,3 +114,7 @@
 			81bdbd7 12/02/2022 Gabriel
 			
 			Perceba que foi repassado para nós o hash abreviado do commit, a sua mensagem e o autor do commit.
+
+	
+
+	PARA MAIS INFORMAÇÕES VISITE A PÁGINA NA WEB: https://devhints.io/git-log-format
