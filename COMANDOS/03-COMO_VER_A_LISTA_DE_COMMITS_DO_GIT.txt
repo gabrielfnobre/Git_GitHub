@@ -1,7 +1,116 @@
 	COMO VER A LISTA DE COMMITS DO GIT
 
-	Para visualizar a lista de commits que foram dados para aquele determinado arquivo, use o comando:
+	VISUALIZAR TODOS OS COMMITS DE UM REPÓSITÓRIO DE UMA ÚNICA VEZ:
 
 		$ git log
 
 		E ele trará para você uma lista de todos os commits executados para aquele repositório, isso é muito útil para quando desejamos revisitar um versionamento que desejamos.
+
+	O formato que geralmente é exibido para nós seria algo semelhante a isso:
+
+		commit 81bdbd7504734b10d1ab8caef267f656f9aaf1ff (HEAD -> master, git_github/master)
+		Author: Gabriel <nobrecoder@gmail.com>
+		Date:   Sat Feb 12 07:22:52 2022 -0300
+
+    		12/02/2022
+		
+		Explicando melhor a mensagem que aparece acima:
+		- commit hash vêm com um número hash que cada commit possuí, número é único, mesmo que 2 commits tenham mensagens iguais o número hash é sempre único;
+		- HEAD: vai sempre apontar para que branch nós estamos no projeto, no nosso caso a branch é a "master";
+		- Author: Mostra quem é o author daquele commit, que são os nomes e email registrados no git quando fazemos a configuração com "user.name" e "user.email";
+		- Date: A data e hora em que o commit aconteceu;
+		- Uma data qualquer;
+
+
+	VISUALIZANDO OS COMMITS DE OUTRAS MANEIRAS:
+
+		O git log é apenas a maneira mais comum de ver os commits, mas podemos personalizar as nossas buscas de commits para outras maneiras, por exemplo:
+
+		VISUALIZANDO COMMITS DE FORMA RESUMIDA EM UMA ÚNICA LINHA:
+
+			$ git log --oneline
+
+			O formato em que a mensagem aparece é:
+
+			e511b34 12/02/2022
+
+			Perceba que o oque aparece é somente o hash resumido, com o início do hash, a mensagem do commit, que no caso colocamos a data do commit.
+
+	
+	VISUALIZANDO COMMIT EM DETALHES:
+
+	Digamos que além de ver o commit desejamos ver detalhes dele, onde ocorreram insertions e exclusions?
+	Isso também é possível usando o seguinte comando:
+
+		$ git log -p
+
+		O formato em que a mensagem aparece é parecido com:
+
+		diff --git a/COMANDOS/02-ADICIONANDO_UM_REPOSITORIO_REMOTO.txt b/COMANDOS/02-ADICIONANDO_UM_REPOSITORIO_REMOTO.txt
+		index e762ff2..669927e 100644
+		--- a/COMANDOS/02-ADICIONANDO_UM_REPOSITORIO_REMOTO.txt
+		+++ b/COMANDOS/02-ADICIONANDO_UM_REPOSITORIO_REMOTO.txt
+		@@ -8,4 +8,7 @@
+
+                commit 78f61bb39d73c6a1f63492d7646752e0c56e914d
+		Author: Gabriel <nobrecoder@gmail.com>
+		Date:   Fri Feb 11 14:46:19 2022 -0300
+
+    		11/02/2022
+
+		Perceba no comando acima que além de mostrar todas as informações mostradas num git log comum, quando usamos o flag "-p", o git também mostra onde ocorreram inserções e exclusões no texto. Veja isso na linhas que possuem sinais de "-" (se referindo a onde tiveram exclusões) e as linhas que tem o sinal de "+" (onde houveram as inserções);
+
+
+
+	VISUALIZANDO SÓ OS DETALHES ESPECIFICOS QUE DESEJAMOS:
+
+	Podemos também escolher que detalhes específicos desejamos que sejam mostrados. Por exemplo, quero ver só os hashs, ou só os nomes dos autores, ou só as mensagens.
+	Tudo isso é possível usando o log "pretty=format".
+
+		O pretty-format sempre recebe uma flag que retornará um resultado específico, podemos até colocar uma flag após a outra para ter mais de um resultado escolhido.
+		Veja alguns hashes que podemos usar:
+
+			Flags para visualizar Hashes:
+			- %H	commit hash
+                        - %h	(abbrev) commit hash
+                        - %T	tree hash
+                        - %t	(abbrev) tree hash
+                        - %P	parent hash
+                        - %p	(abbrev) parent hash
+
+			Flags para visualizar Commits:
+                        - %s	commit subject
+                        - %f	commit subject, filename style
+                        - %b	commit body
+                        - %d	ref names
+                        - %e	encoding
+
+			Flags para visualizar Author do Commit:
+			- %an	author
+			- %aN	author, respecting mailmap
+			- %ae	author email
+			- %aE	author email, respecting mailmap
+			- %aD	author date (rfc2882)
+			- %ar	author date (relative)
+			- %at	author date (unix timestamp)
+			- %ai	author date (iso8601)
+
+			Flags para visualizar o Commiter:
+			- %cn	committer name
+                        - %%cN	committer name, respecting mailmap
+                        - %%ce	committer email
+                        - %%cE	committer email, respecting mailmap
+                        - %%cD	committer date (rfc2882)
+                        - %%cr	committer date (relative)
+                        - %%ct	committer date (unix timestamp)
+                        - %%ci	committer date (iso8601)
+
+		O comando que usamos para fazer um commit pretty é:
+
+			$ git log --pretty="format:%h %s %an"
+
+			Com esse comando teríamos um resultado como este...
+
+			81bdbd7 12/02/2022 Gabriel
+			
+			Perceba que foi repassado para nós o hash abreviado do commit, a sua mensagem e o autor do commit.
