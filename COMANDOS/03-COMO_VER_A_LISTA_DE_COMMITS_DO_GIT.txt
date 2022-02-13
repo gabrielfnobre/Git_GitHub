@@ -118,3 +118,75 @@
 	
 
 	PARA MAIS INFORMAÇÕES VISITE A PÁGINA NA WEB: https://devhints.io/git-log-format
+
+
+	VENDO AS MERGES DE FORMA GRÁFICA:
+
+	È possível ver todos os commits que são feitos em um repositório de maneira gráfica, para isso usamos o seguinte comando:
+
+		$ git log --graph
+
+		O resultado desse comando é algo parecido com isso:
+
+		* commit 833a6b42f0567ee735ffac140dcbb5c276cb9f8a
+                | Author: Gabriel-F-Nobre <nobrecoder@gmail.com>
+                | Date:   Sun Feb 13 06:45:50 2022 -0300
+                |
+                |     adicionado paragrafo da importancia do git e github
+                |
+                *   commit dd708a901812b920be7a67d3ce616146547c3d0e
+                |\  Merge: 94c8137 74def8e
+                | | Author: Gabriel-F-Nobre <nobrecoder@gmail.com>
+                | | Date:   Sun Feb 13 06:22:51 2022 -0300
+                | |
+                | |     Merge branch 'style' of https://github.com/gabrielfnobre/repositorio_local_entre_aspas
+                | |
+                | * commit 74def8e1f070e4ea7135bc44bedf1b7d5e5d4fc4 (local/style)
+                | | Author: Gabriel-F-Nobre <nobrecoder@gmail.com>
+                | | Date:   Sun Feb 13 06:19:21 2022 -0300
+                | |
+                | |     alteracoes de estilo no titulo e paragrafo
+                | |
+                * | commit 94c81378ac93cdaa08a1de51456797f1451681b7
+                |\| Merge: 3b72239 65f4b2c
+                | | Author: Gabriel-F-Nobre <nobrecoder@gmail.com>
+                | | Date:   Sun Feb 13 06:13:13 2022 -0300
+                | |
+                | |     Merge branch 'style' of https://github.com/gabrielfnobre/repositorio_local_entre_aspas
+
+		Perceba que é traçada uma linha á partir do ramo "master", e quaisquer branches criadas depois disso abram novos caminhos que poderão ser convergidos posteriormente quando uma merge for gerada.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

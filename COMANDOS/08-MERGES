@@ -1,0 +1,30 @@
+	MERGES
+
+	As merges ou "mesclas" são comandos que damos no nosso git para unir duas branches que estão separadas em uma única branch, fazendo com que todas as alterações geradas nas branches sejam mescladas em uma só, respeitando sempre a última alteração que foi feita.
+
+	
+	UNINDO O TRABALHO DE UMA BRANCH COM OUTRA:
+
+	Para unir o trabalho de 2 branchs, temos de primeiro fazer o push das nossas alterações ainda na branch secundária, depois temos fazer checkout para a branch master:
+
+		$ git checkout master
+
+	Depois de fazer o checkout, fazemos o seguinte comando....
+		
+		$ git merge "nome_da_branch_secundaria"
+
+		Com esse comando, todas as alterações feitas na branch secundaria serão adicionadas posteriormente na master.
+
+	Uma vez que as alterações estejam na "master" basta todos os integrandes fazerem um pull para terem acesso aos arquivos atualizados.
+
+
+
+	ATUALIZANDO LISTA DE COMMITS NA MASTER:
+
+	Quando fazemos muitas merges, algumas informações podem ficar perdidas, por exemplo, quantos commits minhas branchs secundárias fizeram antes da merge acontecer?
+	Essas informações podem ser capturadas usando um novo comando, que é o rebase, o rebase converge todos os commits feitos numa branch todas no ramo prinicpal, como se os commits tivessem sido feitos na própria master.
+	Podemos usar esse comando da seguinte forma:
+
+		$ git rebase "nome_da_merge_que_desejamos_convergir"
+
+		Após isso, todos os commits daquela branch específica ficarão todos expostos na master.
