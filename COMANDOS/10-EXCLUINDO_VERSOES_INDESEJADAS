@@ -1,0 +1,33 @@
+	EXCLUÍNDO VERSÕES INDESEJADAS
+
+	Pode acontecer de fazermos algumas alterações nos nossos arquivos e depois nos arrependermos de ter feito essas alterações. Como voltar atrás?
+
+	
+	EXCLUÍNDO ALTERAÇÃO QUE AINDA NÃO FOI MARCADA PARA CONTROLAR:
+
+	Para cancelar alterações que ainda não foram marcadas para serem controladas por através do comando "add", basta nós usarmos o comando:
+
+		$ git restore "nome_do_arquivo"
+
+		Com isso, o git vai cancelar todas as alterações que ainda não foram adicionadas para serem commitadas.
+
+
+
+	EXCLUÍNDO ALTERAÇÕES QUE FORAM ADICIONADAS PARA SER CONTROLADAS:
+
+	Quando possuímos alterações que foram adicionadas para serem controladas, ou seja, que já passaram pelo "add", para cancelar essas alterações temos que usar o seguinte comando:
+
+		$ git reset "nome_do_arquivo"
+
+		Com isso, as alterações que foram adicionadas para serem controladas vão voltar a ficar descontroladas, ou seja, vão continuar no arquivo, mas não serão salvas á menos que as adicionemos novamente no controlador.
+
+
+
+	EXCLUÍNDO UM COMMIT INTEIRO:
+
+	Para aquelas situações mais drásticas, onde fizemos uma alteração, a commitamos ela, para cancelar esse commit, nós usamos o seguinte comando:
+
+		$ git revert "hash_do_commit_indesejado"
+
+		Esse comando vai desfazer tudo o que foi gerado no commit anterior, gerando um novo commit onde o commit anterior não existe.
+		ATENÇAO! Uma nova página será aberta no git, mostrando que vai haver uma deleção de commit, é uma mensagem de alerta para impedir que um commit seja apagado sem querer, mas basta digitar ":X" para sair.
