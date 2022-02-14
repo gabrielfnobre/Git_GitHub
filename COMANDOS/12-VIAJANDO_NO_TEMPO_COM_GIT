@@ -1,0 +1,29 @@
+	VIAJANDO NO TEMPO COM GIT
+
+	Com o git é possível viajar no tempo para uma versão específica no passado da história do nosso código.
+	Lembra-se que todos os nossos commits ficam armazenados no git?
+	Por através desses commits podemos escolher o hash de um commit específico e voltar para esse hash, ou seja, por assim dizer estamos voltando no tempo.
+
+	Quando fazemos isso, o nosso git vai por assim dizer para um universo paralelo, onde somente aquele commit exite, ele não está mais amarrado ao nosso branch master, tanto é assim, que se tentarmos fazer um commit para o ramo master isso seria impossível.
+	Mas relaxe, é possível fazer uma ligação nova com a master quando criamos um novo branch á partir do versionamento antigo, mas amarrado ao ramo master.
+
+	Vejamos como fazer essas coisas:
+
+	
+	VOLTANDO NO TEMPO:
+
+		$ git checkout "hash_do_commit"
+
+		A partir do comando acima conseguimos voltar para aquele ponto no código onde salvamos o nosso commit.
+		Porém, como falamos acima, ele fica suspenso num ramo separado da master.
+
+
+
+	VOLTANDO NO TEMPO, MAS AMARRADO NA MASTER:
+
+		$ git checkout "hash_do_commit" -b "novo_branch"
+
+		Perceba que com o comando acima conseguimos voltar no tempo e ao mesmo tempo gerar uma nova branch amarrada na master, ou seja, voltarmos no tempo sem sair da nossa realidade.
+
+
+

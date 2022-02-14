@@ -7,6 +7,11 @@
 		$ git branch "nome_da_branch_nova"
 
 		Com apenas esse comando já conseguimos gerar uma nova branch.
+		Outra forma de criar uma branch é usando o checkout, dessa forma:
+
+		$ git checkout -b "nome_da_nova_branch"
+
+		Perceba que o "-b" mostra ao comando "checkout" que uma nova branch será criada.
 
 		ATENÇÃO!!! Não podemos criar uma branch com o nome "master" ou "main".
 

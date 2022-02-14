@@ -1,0 +1,21 @@
+	VENDO A DIFERENÇA ENTRE 2 COMMITS
+
+	No git também é possível que vejamos as diferenças no código entre 1 ponto de commit e outro ponto no commit, ou então, se nós mexemos um pouquinho no código e não adiocionamos nada para ser contronlado, ele consegue nos mostrar essa diferença também.
+
+	Isso é possível graças a flag "diff", vejamos como usá-la.
+
+
+	VENDO A DIFERENÇA ENTRE OQUE ACABAMOS DE MEXER NO CÓDIGO E O ESTADO ANTERIOR:
+
+		$ git diff
+
+		O simples comando git diff já irá nos mostrar a diferença entre o código que acabamos de mexer e aquele código que já foi adicionado para ser controlado.
+		ATENÇÃO! Se nós usamos "add" o código já terá sido adicionado para ser controlado, e não poderá mais ser visto com o diff.
+
+
+
+	VENDO A DIFERENÇA ENTRE UM COMMIT E OUTRO:
+
+		$ gif diff "hash..hash"
+
+		Usando os hash dos commits onde desejamos ver a diferença o sinal de ".." entre eles, conseguimos capturar todas as mudanças que ocorreram de um ponto do código até o outro ponto.

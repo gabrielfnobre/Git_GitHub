@@ -1,0 +1,53 @@
+	GUARDANDO PROJETOS PARA DEPOIS
+
+	No git também é possível guardar algumas atualizações que nós estamos fazendo para depois, elas ficam guardadas num cache especial do git chamado de "stash".
+	Podemos armazenar várias atualizações no stash e recuperá-las assim que quisermos.
+
+	ATENÇÃO!!!
+	Ao usar o stash as atualizações não serão salvas como acontece no commit, elas serão apenas armazenadas e poderão ser resgatadas depois.
+
+	
+	SALVANDO ATUALIZAÇÃO NO STASH:
+
+		$ git stash
+
+		Somente esse comando, não precisamos colocar nenhuma mensagem e nem nada, o git já irá salvar as atualizações numa stack numerada, onde cada atualização irá receber uma numeração, onde o último stash sempre será o "0" e os anteriores vão crescendo em número de acordo com cada atualização que chega a lista.
+
+
+
+	VENDO OS ARQUIVOS GUARDADOS NO STASH:
+
+		$ git stash list
+
+		Mostra todas as atualizações, terá uma aparência parecida com isso:
+
+		stash@{0}: WIP on master: 08459e1 Revert "comitando_commit indesejado"
+		stash@{1}: WIP on master: 08459e1 Revert "comitando_commit indesejado"
+
+		Perceba que temos 2 atualizações na lista acima, onde cada stash têm a sua numeração sequencial, onde as últmas stashes são as que recebem a numeração "0".
+
+
+
+	APLICANDO UMA STASH SEM DESTRUÍ-LA:
+
+		$ git stash apply "número_da_stash"
+
+		Com esse comando nós vamos aplicar a stash guardada sobre o nosso documento, porém o "apply" não apaga as stashes, elas vão continuar armazenadas.
+		Ao final do comando, ela já abre o comando no git para commitar a mudança.
+
+
+
+	APLICANDO UMA STASH E DESTRUÍNDO ELA:
+
+		$ git stash pop "número_da_stash"
+
+		Com esse comando nós aplicamos a stash, destruímos ela da lista e ainda abrimos o comando no terminal para salvar o commit.
+
+
+
+	DESTRUÍNDO UMA STASH:
+
+		$ git stash drop "número_da_stash"
+
+		Para simplesmente destruir uma stash da lista usamos o comando "drop", porém, ele só destroí a stash, ele não irá aplicá-la.
+		MUITO CUIDADO AO USAR O DROP!
