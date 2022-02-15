@@ -1,0 +1,25 @@
+	CRIANDO ENTREGAS (RELEASES)
+
+	No git também é possível gerar releases dos nossos projetos.
+	Sabe quando você possuí um aplicativo, uma lib ou qualquer outra aplicação que possuí novos releases, onde você pode atualizar o aplicativo para um novo release?
+	Isso é possível no git por através das "tags".
+
+	As "tags" geram um marco na nossa aplicação onde nós definimos que aquele ponto no nosso desenvolvimento foi um determinado release, e que á partir daquele ponto outro release deverá ser gerado.
+
+
+	COMO GERAR UM RELEASE:
+
+		$ git tag -a v0.1.0 -m "mensagem opcional"
+
+		Usando o comando "tag", nós por assim dizer cravamos uma bandeira no nosso código dizendo que aquela é uma determinada versão, a flag -a salvará todos os documentos relacionados e o "v0.1.0" mostra qual é a versão do release que estamos gerando.
+		Note que também podemos incluir uma mensagem no release.
+		Quando um release é gerado, ele passa a ser um local especial no nosso versionamento, como a master, mas de forma diferente.
+		ATENÇÃO!!! Esse comando apenas cria um ponto de release, o nosso código ainda não está disponível para todos, é preciso fazer um push para o release.
+
+
+
+	TORNANDO O RELEASE DISPONÍVEL PARA TODOS:
+
+		$ git push origin v0.1.0
+
+		Note que precisamos fazer um push para o release, invez de usar o nome master. Temos que lembrar somente que no lugar do "origin" vamos colocar o commit para o nosso ramo principal, é isso que vai amarrar o nosso release ao nosso projeto no GitHub.
